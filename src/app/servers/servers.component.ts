@@ -12,4 +12,7 @@ export class ServersComponent {
       this.allowNewServer = true;
      },2000)
   }
+  getAllowNewServer() {
+    return this.allowNewServer;
+  }
 }
