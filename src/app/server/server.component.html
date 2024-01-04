@@ -2,7 +2,9 @@
   <p class="heading"><u>{{ 'Server Details:' }}</u></p>
   <p class="details">
     Server ID: {{ serverId }} <br/>
-    Server Location: {{ getServerLocation() }} <br/>
-    Server status: {{ getServerStatus() }}
+    Server Location: <a [ngClass] ="{remote: serverLocation === 'remote'}">
+                     {{ getServerLocation() }}
+                     </a> <br/>
+    Server status: <a  [ngStyle]="{color: getColor()}"> {{ getServerStatus() }} </a>
   </p>
 </div>

@@ -1,7 +1,11 @@
 div p.heading {
-  color: blue;
+  color: brown;
 }
 
 div {
   padding:20px;
+}
+
+.remote {
+  color: brown;
 }

@@ -1,4 +1,7 @@
-<app-server class="local"></app-server>
-<app-server class="remote"></app-server>
+<input type="text" [(ngModel)]="serverName" placeholder="Server Name"/>
+<button class="btn btn-primary" [disabled] = "!getAllowNewServer()" (click) = "onCreateServer()">Add Server</button>
+<p *ngIf = "serverCreationStatus"> New Server created with name {{ serverName }} </p>
+
+<app-server *ngFor = "let server of servers" class="serverClass"></app-server>
+<!--<app-server class="server2"></app-server>-->
 <!--<button class="btn btn-primary" [disabled] = "!allowNewServer">Add Server</button>-->
-<button class="btn btn-primary" [disabled] = "!getAllowNewServer()">Add Server</button>

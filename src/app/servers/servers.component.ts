@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer = false;
+  serverCreationStatus = false;
+  serverName = 'server3';
+  servers = ['testServer1', 'testServer2'];
   constructor() {
      setTimeout(() => {
       this.allowNewServer = true;
@@ -14,5 +17,12 @@ export class ServersComponent {
   }
   getAllowNewServer() {
     return this.allowNewServer;
+  }
+  onCreateServer() {
+    this.servers.push(this.serverName);
+    this.serverCreationStatus = true;
+    setTimeout(() => {
+     this.serverCreationStatus = false;
+    }, 5000)
   }
 }
